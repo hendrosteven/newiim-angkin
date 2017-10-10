@@ -1,0 +1,20 @@
+Setup JPA 
+1. buka start.spring.io
+2. tentukan konfigurasi project
+3. tentutkan dependency : mysql, jpa, web, ... : websocket, social, etc
+4. setup application.properties file --> seting DB connection variabel
+5. create Entity class : 
+   - @Entity
+   - @Table (name='')
+   - implements Serializable
+   - @Id, @GeneratedValue(strategy : identity)
+   - Field lainnya --> @Column() --> length, unique, nullable, etc..
+6. Create repo interface --> extends CrudRepository
+7. Create Controller --> @RestController, @RequestMapping, method = POST, GET, PUT, DELETE, etc..
+
+JPA Relationship
+1. Relasi terjadi antara 2 entity 
+2. @OnetoOne, @OnetoMany, @ManytoOne, @ManyToMany
+3. Unidirectional= Hanya salah satu entity yang menyimpan relasi
+   Bidirectional=  Kedua entity menyimpan relasi
+   
